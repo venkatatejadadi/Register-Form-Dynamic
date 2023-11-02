@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+
+
+    form button {
+      background-color: blue;
+      color: white;
+    }
+
+    a.a {
+      color: red;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a.a">
+    <h2>Register Form </h2>
+
+  </div>
+  <div id="root">
+
+  </div>
+  <script>
+
+    const rootEl = document.getElementById("root");
+    console.log({ rootEl });
+    const formEl = document.createElement("form");
+    rootEl.appendChild(formEl);
+
+ const p1 = document.createElement("p");
+ p1.innerHTML = "First Name";
+ formEl.appendChild(p1);
+
+     
+
+    const firstNameInput = document.createElement("input");
+    firstNameInput.setAttribute("type", "text");
+    firstNameInput.setAttribute("placeholder", "Enter First name");
+    formEl.appendChild(firstNameInput);
+
+    const p2= document.createElement("p");
+ p2.innerHTML = "Last Name";
+ formEl.appendChild(p2);
+
+    const lastNameInput = document.createElement("input");
+    lastNameInput.setAttribute("type", "text");
+    lastNameInput.setAttribute("placeholder", "Enter Last name");
+    formEl.appendChild(lastNameInput);
+
+    const emailInput = document.createElement("input");
+    emailInput.setAttribute("type", "text");
+    emailInput.setAttribute("placeholder", "Enter email");
+    formEl.appendChild(emailInput);
+
+    const passwordInput = document.createElement("input");
+    passwordInput.setAttribute("type", "password");
+    passwordInput.setAttribute("placeholder", "Enter password");
+    formEl.appendChild(passwordInput);
+
+    const repeatPasswordInput = document.createElement("Input")
+    repeatPasswordInput.setAttribute("type", "password")
+    repeatPasswordInput.setAttribute("placeholder", "Repeat Password")
+    formEl.appendChild(repeatPasswordInput);
+
+    const submitButton = document.createElement("button");
+    submitButton.innerHTML = "Submit";
+
+
+    formEl.appendChild(submitButton);
+  </script>
+</body>
+
+</html>
